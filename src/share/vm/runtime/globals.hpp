@@ -4079,6 +4079,10 @@ class CommandLineFlags {
   diagnostic(bool, UseOWSTTaskTerminator, true,                             \
           "Use Optimized Work Stealing Threads task termination "           \
           "protocol")                                                       \
+  experimental(bool, UseFastSerializer, false,                              \
+          "Cache-based serialization.It is extremely fast, but it can only" \
+          "be effective in certain scenarios.")                             \
+                                                                            \
 
 /*
  *  Macros for factoring of globals

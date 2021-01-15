@@ -1517,11 +1517,6 @@ JVM_ENTRY (void, CoroutineSupport_checkAndThrowException0(JNIEnv* env, jclass kl
   }
 JVM_END
 
-UNSAFE_ENTRY(jboolean, Unsafe_GetUseFastSerializer(JNIEnv *env, jobject unsafe)) {
-  return UseFastSerializer;
-}
-UNSAFE_END
-
 /// JVM_RegisterUnsafeMethods
 
 #define ADR "J"
@@ -1704,7 +1699,7 @@ static JNINativeMethod methods_15[] = {
     {CC "monitorEnter",       CC "(" OBJ ")V",               FN_PTR(Unsafe_MonitorEnter)},
     {CC "monitorExit",        CC "(" OBJ ")V",               FN_PTR(Unsafe_MonitorExit)},
     {CC "throwException",     CC "(" THR ")V",               FN_PTR(Unsafe_ThrowException)},
-    {CC "getUseFastSerializer",   CC "()Z",              FN_PTR(Unsafe_GetUseFastSerializer)}
+    {CC "getUseFastSerializer",   CC "()Z",              FN_PTR(Unsafe_GetUseFastSerializer)},
     {CC "compareAndSwapObject", CC "(" OBJ "J" OBJ "" OBJ ")Z",  FN_PTR(Unsafe_CompareAndSwapObject)},
     {CC "compareAndSwapInt",  CC "(" OBJ "J""I""I"")Z",      FN_PTR(Unsafe_CompareAndSwapInt)},
     {CC "compareAndSwapLong", CC "(" OBJ "J""J""J"")Z",      FN_PTR(Unsafe_CompareAndSwapLong)},
@@ -1760,7 +1755,7 @@ static JNINativeMethod methods_16[] = {
     {CC "monitorExit",        CC "(" OBJ ")V",               FN_PTR(Unsafe_MonitorExit)},
     {CC "tryMonitorEnter",    CC "(" OBJ ")Z",               FN_PTR(Unsafe_TryMonitorEnter)},
     {CC "throwException",     CC "(" THR ")V",               FN_PTR(Unsafe_ThrowException)},
-    {CC "getUseFastSerializer",   CC "()Z",              FN_PTR(Unsafe_GetUseFastSerializer)}
+    {CC "getUseFastSerializer",   CC "()Z",              FN_PTR(Unsafe_GetUseFastSerializer)},
     {CC "compareAndSwapObject", CC "(" OBJ "J" OBJ "" OBJ ")Z",  FN_PTR(Unsafe_CompareAndSwapObject)},
     {CC "compareAndSwapInt",  CC "(" OBJ "J""I""I"")Z",      FN_PTR(Unsafe_CompareAndSwapInt)},
     {CC "compareAndSwapLong", CC "(" OBJ "J""J""J"")Z",      FN_PTR(Unsafe_CompareAndSwapLong)},
@@ -1817,7 +1812,7 @@ static JNINativeMethod methods_18[] = {
     {CC "monitorExit",        CC "(" OBJ ")V",               FN_PTR(Unsafe_MonitorExit)},
     {CC "tryMonitorEnter",    CC "(" OBJ ")Z",               FN_PTR(Unsafe_TryMonitorEnter)},
     {CC "throwException",     CC "(" THR ")V",               FN_PTR(Unsafe_ThrowException)},
-    {CC "getUseFastSerializer", CC "()Z",                    FN_PTR(Unsafe_GetUseFastSerializer)}
+    {CC "getUseFastSerializer", CC "()Z",                    FN_PTR(Unsafe_GetUseFastSerializer)},
     {CC "compareAndSwapObject", CC "(" OBJ "J" OBJ "" OBJ ")Z",  FN_PTR(Unsafe_CompareAndSwapObject)},
     {CC "compareAndSwapInt",  CC "(" OBJ "J""I""I"")Z",      FN_PTR(Unsafe_CompareAndSwapInt)},
     {CC "compareAndSwapLong", CC "(" OBJ "J""J""J"")Z",      FN_PTR(Unsafe_CompareAndSwapLong)},
